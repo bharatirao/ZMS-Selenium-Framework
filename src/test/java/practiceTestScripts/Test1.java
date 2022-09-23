@@ -1,5 +1,7 @@
 package practiceTestScripts;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class Test1 {
@@ -10,5 +12,11 @@ private void TC1Test() {
 	String browser = System.getProperty("br");
 	String url = System.getProperty("ur");
 	System.out.println(browser);
+	
+	WebDriver driver=new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get("www.skillrary.com");
+	driver.close();
+	
 }
 }
